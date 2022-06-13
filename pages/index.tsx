@@ -1,71 +1,122 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import ArtCard from '../components/ArtCard'
+import type { ArtCardProps } from '../components/ArtCard';
+import { Template } from '../components/Template'
 
 const Home: NextPage = () => {
+  const data: Array<ArtCardProps> = [
+    {
+      id: 1,
+      image_url : "/the_stand.jpg",
+      art_title : "The Stand Off",
+      artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+      category : "The Moments",
+      body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 2,
+        image_url: "the_chair.jpg",
+        art_title: "The Chair",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 3,
+        image_url: "the_fight.jpg",
+        art_title: "The Fight",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 4,
+        image_url: "the_guitar_1.jpg",
+        art_title: "The Guitar 1",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 5,
+        image_url: "the_guitar_2.jpg",
+        art_title: "The Guitar 2",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 6,
+        image_url: "the_kiss.jpg",
+        art_title: "The Kiss",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 7,
+        image_url: "the_liftoff.jpg",
+        art_title: "The Liftoff",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 8,
+        image_url: "the_plea.jpg",
+        art_title: "The Plea",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 9,
+        image_url: "the_plot.jpg",
+        art_title: "The Plot",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 10,
+        image_url: "the_pose.jpg",
+        art_title: "The Pose",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 11,
+        image_url: "the_sky.jpg",
+        art_title: "The Sky",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 12,
+        image_url: "the_stand.jpg",
+        art_title: "The Stand",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+    {
+        id: 13,
+        image_url: "the_tango.jpg",
+        art_title: "The Tango",
+        artists : ["Denzell Michael Ford", "Edith Mary Oyugi"],
+        category : "The Moments",
+        body_text : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+    },
+  ];
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+    <Template>
+      <main className="m-auto w-11/12 flex flex-row flex-wrap justify-between space-y-3">
+        {data.map((elem) => <ArtCard {...elem} />)
+        }
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+    </Template>
   )
 }
 
